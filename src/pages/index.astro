@@ -1,0 +1,508 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Sep from "../components/Sep.astro";
+import Devider from "../components/Devider.astro";
+import Testimonial from "../components/Testimonial.astro";
+import Feature from "../components/Feature.astro";
+const CTAlink = "https://calendly.com/travelwithhodaya/call";
+---
+
+<Layout title="הודיה">
+  <main class="relative">
+    <!-- hero / header -->
+    <section class="mb-20 overflow-x-hidden xl:mb-40">
+      <svg
+        data-name="Layer 1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1440 320"
+        preserveAspectRatio="none"
+        class="svg absolute hidden lg:block"
+        style="height: 560px; width: 100%; z-index: -10; overflow: hidden"
+      >
+        <defs>
+          <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+            <stop stop-color="hsl(217, 102%, 99%)" offset="0%"></stop>
+            <stop stop-color="#c5b4e8" offset="100%"></stop>
+          </linearGradient>
+        </defs>
+        <path
+          fill="url(#sw-gradient-0)"
+          d="M 0.351 264.418 C 0.351 264.418 33.396 268.165 47.112 270.128 C 265.033 301.319 477.487 325.608 614.827 237.124 C 713.575 173.504 692.613 144.116 805.776 87.876 C 942.649 19.853 1317.845 20.149 1440.003 23.965 C 1466.069 24.779 1440.135 24.024 1440.135 24.024 L 1440 0 L 1360 0 C 1280 0 1120 0 960 0 C 800 0 640 0 480 0 C 320 0 160 0 80 0 L 0 0 L 0.351 264.418 Z"
+        ></path>
+      </svg>
+
+      <div
+        class="px-6 py-12 text-center text-gray-800 md:px-12 lg:mb-12 lg:text-right"
+      >
+        <div class="container mx-auto xl:px-32">
+          <div
+            class="grid items-center gap-y-12 gap-x-6 md:flex lg:grid-cols-2"
+          >
+            <div class="mt-12 lg:mt-0">
+              <h1
+                class="mb-12 whitespace-nowrap font-heebo text-5xl font-black max-xs:text-3xl sm:text-6xl lg:text-7xl xl:text-8xl"
+              >
+                צאו איתנו למסע <br /><span class="text-primary"
+                  >לחיים חופשיים</span
+                >
+              </h1>
+              <div class="w-full space-y-3 space-x-2 space-x-reverse">
+                <a
+                  class="inline-block rounded bg-primary px-8 py-3 text-sm font-medium text-white transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:bg-primary xl:text-lg"
+                  href={CTAlink}
+                >
+                  התחל את המסע שלך
+                </a>
+
+                <a
+                  class="inline-block rounded border border-current px-8 py-3 text-sm font-medium text-primary transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-primary xl:text-lg"
+                  href="#about"
+                >
+                  קרא עוד
+                </a>
+              </div>
+            </div>
+            <div class="mb-12 lg:mb-0">
+              <img src="us.jpg" class="w-full rounded-lg shadow-lg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--  -->
+
+    <!-- about -->
+    <section class="scroll-m-16 bg-home py-7 text-center" id="about">
+      <div
+        class="mx-auto flex w-full max-w-screen-xl flex-grow flex-col items-stretch justify-center gap-5 px-3 text-center md:flex-1 md:flex-row md:px-10"
+      >
+        <!-- <div class="order-1 w-full md:order-3 lg:w-7/12">
+          <img src="desert.jpg" alt="" class="object-cover md:aspect-square" />
+        </div> -->
+        <div class="order-2 w-full px-5">
+          <h1 class="font-heebo text-5xl font-bold xl:text-7xl">קצת עליי...</h1>
+          <h3
+            class="mx-auto max-w-3xl text-base text-gray-500 md:text-lg xl:text-xl"
+          >
+            אני הודיה מטיילת עם ניסיון מטורף של שנים בטיולים ונוודות. טיילתי
+            המון, ל 60 מדינות שונות (לחלקן חזרתי מספר פעמים) ולמדתי המון על
+            טיולים, תרבויות, אנשים ועוד...
+          </h3>
+          <Sep />
+
+          <p class="mx-auto max-w-5xl text-base md:text-lg xl:text-2xl">
+            למדתי את כל הדברים הקטנים שעוזרים לי לטייל ומשדרגים לי את הטיול
+            ברמות, גם כשאין לי תקציב גדול. למדתי להתמצא במדינות שמעולם לא הייתי
+            בהן, לתקשר למרות מחסום השפה , איך לתכנן טיול ולשמור על עצמי בטוחה,
+            למדתי להסתגל לשינויים ולתרבויות חדשות. למדתי להיות עצמאית יותר,
+            לסמוך על עצמי ולהקשיב לאינטואיציות שלי ולאחר שנים של מסעות וטיולים,
+            הבנתי שיש בידי מידע שיכול לעזור לעוד המון אנשים.
+          </p>
+          <h3
+            class="mt-3 font-varela text-lg font-medium md:text-xl xl:text-3xl"
+          >
+            המידע שצברתי עם השנים שווה זהב ויכול לחסוך לכם המון כסף, זמן וכאב
+            ראש והיום אני עוזרת לאנשים לחוות את העולם ולטייל בצורה הנכונה.
+          </h3>
+          <button
+            data-ripple-light="true"
+            class="order-4 mx-auto mt-3 block rounded-md bg-primary px-5 py-3 tracking-wider text-white transition-all hover:scale-105"
+          >
+            קבע שיחת הכירות
+          </button>
+        </div>
+      </div>
+    </section>
+    <!--   -->
+
+    <!-- features -->
+    <!-- <section id="services " class="mx-auto max-w-screen-2xl">
+      <div class="w-full px-4 py-8 sm:py-12 sm:px-6 lg:py-16 lg:px-8">
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
+          <div
+            class="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:order-last lg:h-full"
+          >
+            <img
+              alt="Party"
+              src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+              class="absolute inset-0 h-full w-full object-cover"
+            />
+          </div>
+
+          <div class="lg:py-24">
+            <h2 class="font-heebo text-3xl font-bold sm:text-4xl">
+              יעוץ והכנה
+            </h2>
+
+            <p class="mt-4 font-varela text-gray-600 xl:text-lg">
+              במסגרת השיחות נעבור על כל מה שצריך להיערך לקראת הטיול והמעבר. אתן
+              לכם כלים להתמודדות עם מצבים שונים, נתכנן ונוודא שאתם יודעים להתנהל
+              בשטח בצורה הנכונה ונעשה את כל ההתאמות למקום שבו תבחרו ללכת לטייל
+              ולנווד.
+            </p>
+
+            <a
+              href="#"
+              class="mt-8 inline-block rounded bg-indigo-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400"
+            >
+              צרו קשר
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full px-4 py-8 sm:py-12 sm:px-6 lg:py-16 lg:px-8" dir="ltr">
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
+          <div
+            class="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:order-last lg:h-full"
+          >
+            <img
+              alt="Party"
+              src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+              class="absolute inset-0 h-full w-full object-cover"
+            />
+          </div>
+
+          <div class="lg:py-24" dir="rtl">
+            <h2 class="font-heebo text-3xl font-bold sm:text-4xl">
+              שיחות ליווי בזמן טיול
+            </h2>
+
+            <p class="mt-4 font-varela text-gray-600 xl:text-lg">
+              הרבה פעמים כשאנחנו בחו"ל ובוודאי כשאנחנו מטיילים לבד אנחנו מרגישים
+              חוסר בטחון, מתלבטים ולא יודעים מה לעשות ולאן ללכת או שמרגישים
+              תחושת בדידות.
+            </p>
+            <p class="mt-4 font-varela text-gray-600 xl:text-lg">
+              אנחנו מרגישים שאנחנו צריכים להתייעץ עם מישהו, ובמיוחד אחרי שאני זו
+              שמכינה אתכם לקראת הטיול, אתם בטח תרצו להתייעץ איתי גם בזמן אמת
+              לגבי דברים שתחוו בטיול. לפעמים זה גם דברים מסוכנים/מאתגרים שאתם
+              חווים ותרצו את עזרתי. ולכן יש לי שירות מיוחד בשבילכם- שיחות sos
+              בכל מקום בעולם שאתם נמצאים בעלות סמלית ומוזלת ללקוחותיי.
+            </p>
+
+            <a
+              href="#"
+              class="mt-8 inline-block rounded bg-indigo-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400"
+            >
+              Get Started Today
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full px-4 py-8 sm:py-12 sm:px-6 lg:py-16 lg:px-8">
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
+          <div
+            class="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:order-last lg:h-full"
+          >
+            <img
+              alt="Party"
+              src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+              class="absolute inset-0 h-full w-full object-cover"
+            />
+          </div>
+
+          <div class="lg:py-24">
+            <h2 class="font-heebo text-3xl font-bold sm:text-4xl">
+              ליווי אישי
+            </h2>
+            <h3
+              class="font-varela text-lg font-semibold text-gray-500 sm:text-xl"
+            >
+              אני מצטרפת אליכם לטיול ומלמדת אתכם הכל באופן אישי.
+            </h3>
+            <p class="mt-4 font-varela text-gray-600 xl:text-lg">
+              מתאים יותר לאנשים שרוצים אותי צמודה אליהם. שמעדיפים ללכת עם מישהי
+              מנוסה בטיולים ויכולה להקל עליהם את התהליכים, לקצר להם את קבלת
+              ההחלטות ולגרום להם לחוויה מהנה יותר בטיול בלי להתמודד לבד עם אתגרי
+              המקום.
+            </p>
+
+            <a
+              href="#"
+              class="mt-8 inline-block rounded bg-indigo-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400"
+            >
+              Get Started Today
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full px-4 py-8 sm:py-12 sm:px-6 lg:py-16 lg:px-8" dir="ltr">
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
+          <div
+            class="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:order-last lg:h-full"
+          >
+            <img
+              alt="Party"
+              src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+              class="absolute inset-0 h-full w-full object-cover"
+            />
+          </div>
+
+          <div class="lg:py-24" dir="rtl">
+            <h2 class="font-heebo text-3xl font-bold sm:text-4xl">
+              טיול קבוצתי
+            </h2>
+
+            <p class="mt-4 font-varela text-gray-600 xl:text-lg">
+              אפשרי בקבוצה קטנה של עד 10 מטיילים שאני מארגנת או קבוצה שאתם
+              מארגנים ואני מגיעה כדי ללוות אתכם. מטרת הטיול הקבוצתי זה לעבור
+              חוויה משותפת, להכיר מקומות שמעניינים את כל חברי הקבוצה, לעבור
+              חוויות משותפות, להתגבש ולעבור תקופה חוויתית שאין שניה לה.
+            </p>
+
+            <a
+              href="#"
+              class="mt-8 inline-block rounded bg-indigo-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400"
+            >
+              ארגנו טיול קבוצתי
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full px-4 py-8 sm:py-12 sm:px-6 lg:py-16 lg:px-8">
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
+          <div
+            class="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:order-last lg:h-full"
+          >
+            <img
+              alt="Party"
+              src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+              class="absolute inset-0 h-full w-full object-cover"
+            />
+          </div>
+
+          <div class="lg:py-24">
+            <h2 class="font-heebo text-3xl font-bold sm:text-4xl">
+              הדרכה למציאת טיסות שוות וזולות
+            </h2>
+
+            <p class="mt-4 font-varela text-gray-600 xl:text-lg">
+              במיוחד עבור אלו שלא אוהבים להוציא כסף על טיסות, אלו שטסים המון
+              כמוני או שלא יודעים איך לחסוך בעלויות, הכנתי הדרכה מוקלטת מוכנה
+              מראש שתיתן לכם את כל הטיפים ותחסוך לכם מאות ועשרות דולרים על
+              כרטיסי טיסה לכל היעדים בעולם.
+            </p>
+
+            <a
+              href="#"
+              class="mt-8 inline-block rounded bg-indigo-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400"
+            >
+              צרו קשר
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full px-4 py-8 sm:py-12 sm:px-6 lg:py-16 lg:px-8" dir="ltr">
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
+          <div
+            class="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:order-last lg:h-full"
+          >
+            <img
+              alt="Party"
+              src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+              class="absolute inset-0 h-full w-full object-cover"
+            />
+          </div>
+
+          <div class="lg:py-24" dir="rtl">
+            <h2 class="font-heebo text-3xl font-bold sm:text-4xl">הרצאות</h2>
+            <h3
+              class="font-varela text-lg font-semibold text-gray-500 sm:text-xl"
+            >
+              איך להגשים חלום ולצאת לטייל בעולם גם אם זה נראה בלתי אפשרי.
+            </h3>
+            <p class="mt-4 font-varela text-gray-600 xl:text-lg">
+              ההרצאה מבוססת על סיפור חיי האישי, היום אני כבר אחרי ביקורים ב60
+              מדינות. בהרצאה תלמדו קצת על המסע שעברתי בחיים, על האתגרים שלי
+              ותקבלו העצמה אישית, השראה והבנה שהכל אפשרי ובשביל להגשים חלום,
+              לצאת ולטייל לא צריך לרוקן את חשבון הבנק.
+            </p>
+
+            <a
+              href="#"
+              class="mt-8 inline-block rounded bg-indigo-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400"
+            >
+              צרו קשר
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full px-4 py-8 sm:py-12 sm:px-6 lg:py-16 lg:px-8">
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
+          <div
+            class="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:order-last lg:h-full"
+          >
+            <img
+              alt="Party"
+              src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+              class="absolute inset-0 h-full w-full object-cover"
+            />
+          </div>
+
+          <div class="lg:py-24">
+            <h2 class="font-heebo text-3xl font-bold sm:text-4xl">
+              קורס הכנה לטיול
+            </h2>
+
+            <p class="mt-4 font-varela text-gray-600 xl:text-lg">
+              בימים אלו אני מפתחת קורס דיגיטלי שכל אחד ואחת מכם יוכלו לרכוש
+              ולצפות בו ולהיערך לטיול גם בלי עזרתי האישית. המטרה של הקורס הזה
+              הוא להנגיש לכם את הידע בזמן שנוח לכם ובצורה שהכי מתאימה לכם בלי
+              להיות תלויים בי כמלווה באופן אישי.
+            </p>
+
+            <a
+              href="#"
+              class="mt-8 inline-block rounded bg-indigo-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400"
+            >
+              צרו קשר
+            </a>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <section
+      class="mb-32 scroll-m-16 py-10 text-center text-gray-800"
+      id="services"
+    >
+      <div class="flex flex-col items-center px-5 text-center">
+        <h1 class="mb-6 font-heebo text-5xl font-bold xl:text-7xl">שירותים</h1>
+        <h3 class="mb-12 font-varela text-3xl text-gray-500">
+          איך אני יכולה לשפר לכם את הטיול לחוויה בלתי נשכחת
+        </h3>
+      </div>
+
+      <div
+        class="mx-auto grid max-w-screen-2xl justify-center px-10 md:grid-cols-2 lg:grid-cols-4 lg:gap-4 lg:gap-x-12"
+      >
+        <Feature title="יעוץ והכנה" icon="fa-suitcase-rolling fa-solid">
+          במסגרת השיחות נעבור על כל מה שצריך להיערך לקראת הטיול והמעבר. אתן לכם
+          כלים להתמודדות עם מצבים שונים, נתכנן ונוודא שאתם יודעים להתנהל בשטח
+          בצורה הנכונה ונעשה את כל ההתאמות למקום שבו תבחרו ללכת לטייל ולנווד.
+        </Feature>
+        <Feature
+          title="SOS"
+          cotitle="שיחות ליווי בזמן טיול"
+          icon="fa-phone-volume fa-solid"
+        >
+          כשאנחנו בחו"ל או במסע לבד, נמצאים פעמים רבות במצב של חוסר בטחון,
+          מתלבטים ולא יודעים לאן ללכת או מה לעשות, ומרגישים בדידות. נדרשים
+          להתייעץ עם מישהו, במיוחד אחרי שאני מכינה אתכם לטיול. בפעמים קרובות
+          מתגלים דברים מסוכנים או מאתגרים שמחייבים עזרה מיידית. יש לי שירות
+          מיוחד לכם - שיחות SOS בכל מקום בעולם בעלות סמלית ומוזלת ללקוחות שלי.
+        </Feature>
+        <Feature
+          title="ליווי אישי"
+          cotitle="אני מצטרפת אליכם לטיול ומלמדת אתכם הכל באופן אישי."
+          icon="fa-compass fa-solid"
+        >
+          מתאים יותר לאנשים שרוצים אותי צמודה אליהם. שמעדיפים ללכת עם מישהי
+          מנוסה בטיולים ויכולה להקל עליהם את התהליכים, לקצר להם את קבלת ההחלטות
+          ולגרום להם לחוויה מהנה יותר בטיול בלי להתמודד לבד עם אתגרי המקום.
+        </Feature>
+        <Feature title="טיול קבוצתי" icon="fa-people-group fa-solid">
+          אפשרי בקבוצה קטנה של עד 10 מטיילים שאני מארגנת או קבוצה שאתם מארגנים
+          ואני מגיעה כדי ללוות אתכם. <br />
+          מטרת הטיול הקבוצתי זה לעבור חוויה משותפת, להכיר מקומות שמעניינים את כל
+          חברי הקבוצה, לעבור חוויות משותפות, להתגבש ולעבור תקופה חוויתית שאין שניה
+          לה.
+        </Feature>
+        <Feature
+          title="הרצאות"
+          cotitle="איך להגשים חלום ולצאת לטייל בעולם גם אם זה נראה בלתי אפשרי"
+          icon="fa-solid  fa-chalkboard-teacher"
+        >
+          ההרצאה מבוססת על סיפור חיי האישי, שכידוע לכם, היום אני כבר אחרי
+          ביקורים ב60 מדינות. בהרצאה תלמדו קצת על המסע שעברתי בחיים, על האתגרים
+          שלי ותקבלו העצמה אישית, השראה והבנה שהכל אפשרי ובשביל להגשים חלום,
+          לצאת ולטייל לא צריך לרוקן את חשבון הבנק.
+        </Feature>
+        <Feature
+          title="הדרכה למציאת טיסות שוות וזולות"
+          icon="fa-plane fa-solid"
+        >
+          במיוחד עבור אלו שלא אוהבים להוציא כסף על טיסות, אלו שטסים המון כמוני
+          או שלא יודעים איך לחסוך בעלויות, הכנתי הדרכה מוקלטת מוכנה מראש שתיתן
+          לכם את כל הטיפים ותחסוך לכם מאות ועשרות דולרים על כרטיסי טיסה לכל
+          היעדים בעולם.
+        </Feature>
+        <Feature title="קורס הכנה לטיול" icon="fa-map-signs fa-solid">
+          בימים אלו אני מפתחת קורס דיגיטלי שכל אחד ואחת מכם יוכלו לרכוש ולצפות
+          בו ולהיערך לטיול גם בלי עזרתי האישית. המטרה של הקורס הזה הוא להנגיש
+          לכם את הידע בזמן שנוח לכם ובצורה שהכי מתאימה לכם בלי להיות תלויים בי
+          כמלווה באופן אישי.
+        </Feature>
+      </div>
+    </section>
+
+    <!--  -->
+
+    <!-- recommendations -->
+    <Testimonial />
+    <!--  -->
+
+    <Devider />
+
+    <!-- 2nd CTA -->
+    <section
+      class="overflow-hidden bg-gray-50 sm:grid sm:grid-cols-2 sm:items-center"
+    >
+      <div class="p-8 md:p-12 lg:px-16 lg:py-24">
+        <div class="mx-auto max-w-2xl text-center sm:text-right">
+          <h2 class="font-varela text-2xl font-bold text-gray-900 md:text-3xl">
+            התחילו לתכנן את טיול החלומות שלכם
+          </h2>
+
+          <p class="hidden text-gray-500 md:mt-4 md:block xl:text-lg">
+            התחילו לטייל בעולם ולחיות את החיים עם הדרכה שתעזור לכם לחוות את המסע
+            בדרך שהכי תתאים לכם.
+          </p>
+
+          <div class="mt-4 md:mt-8">
+            <a
+              class="active:bg-dark_primary inline-block rounded bg-primary px-8 py-3 text-sm font-medium text-white transition hover:rotate-2 hover:scale-110 focus:outline-none focus:ring"
+              href={CTAlink}
+            >
+              צרו קשר
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <img
+        alt=""
+        src="https://images.unsplash.com/photo-1613064934056-08a061014f37?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+        class="h-full w-full object-cover sm:h-[calc(100%_-_2rem)] sm:self-end ltr:sm:rounded-tl-[30px] rtl:sm:rounded-tr-[30px] md:h-[calc(100%_-_4rem)] ltr:md:rounded-tl-[60px] rtl:md:rounded-tr-[60px]"
+      />
+    </section>
+    <!--  -->
+  </main>
+</Layout>
+<!-- accesibility -->
+<script>
+  const callback = function (entries: IntersectionObserverEntry[]) {
+    entries.forEach((entry: IntersectionObserverEntry) => {
+      console.log(entry);
+
+      if (entry.isIntersecting) {
+        entry.target.classList.add("animate-fadeIn");
+      } else {
+        entry.target.classList.remove("animate-fadeIn");
+      }
+    });
+  };
+  const observer = new IntersectionObserver(callback);
+
+  const targets = document.querySelectorAll(".js-show-on-scroll");
+  targets.forEach(function (target) {
+    target.classList.add("opacity-0");
+    observer.observe(target);
+  });
+</script>

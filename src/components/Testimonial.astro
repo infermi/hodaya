@@ -1,0 +1,176 @@
+---
+import Star from "./Star.astro";
+
+const reviews = [
+  {
+    name: "אביבה דסטה",
+    title: '"סגרתי טיול לבד בפעם הראשונה"',
+    text: `וואיי פשוט כל כך מעריצה אותך. לגמרי מעוררת השראה,
+     הביטחון שלך לטייל לבד ובנוסף להסתובב לבד בשעות החשכה, אלופההה!
+     אגב סגרתי טיול לבד בפעם הראשונה ( לאוסטריה) מקווה שלא אתפוס רגליים קרות.
+     אבל אין ספק שהסטורי שלך נותן עידוד
+וחיזוק`,
+  },
+  {
+    name: "עדן",
+    title: '"הודיה עזרה לי למקד את עצמי"',
+    text: `התהליך מאוד עזק לי למקד את עצמי
+    והעובדה ששיתפת בחוויות האישיות שלך ובהתמודדות שלך
+     עם הרבה מצבים נתנה לי פרספקטיבה שונה לטיול ועזרה מאוד!
+ממליצה לכל מי שרוצה לטוס לבד לעבור
+אותן!`,
+  },
+  {
+    name: "Linda from New York",
+    title: '"A new way to look at life"',
+    text: `Thank you for showing me a new way to look at my life. I know I will have more sad days but I can see a new joy in living my life every day. Thank you for what you've taught me God bless you my
+sister`,
+  },
+  {
+    name: "רחל",
+    title: '"הודיה הראת לי שזה באמת אפשרי"',
+    text: ` בחרתי מדינה שאני רוצה לטוס אליה אבל משם לבאמת לתכנן הייתי רחוקה שנות אור.
+     לא באמת האמנתי שאני יכולה לעשות את זה ובעיקר גם מאוד פחדתי מכל הסכנות שיכולות לקרות 
+    .עקבתי כבר תקופה אחרי דף הפייסבוק של הודיה ויום אחד עזרתי אומץ ופניתי לשמוע על הייעוץ.
+     עדין לא בטוחה אם אני באמת עושה את זה אחרי השיחת התייעצות
+     הבנתי שזה כן משהו שיכול להיות אפשרי
+     וגם היא הציגה לי את התוכנית עבודה
+     והרגשתי שזה בדיוק הדברים שאני צריכה.
+     מעבר לנושא הטכני שלא היה לי יותר מדי מושג
+     טסתי פעם אחת עם חברות ולא ממש לקחתי בארגון הטכני.
+     היה גם את הנושא הנפשי הפחד הסכנה בלטייל לבד
+במדינה זרה.
+בליווי שהיא מציעה עובדים על שני התחומים. כל פגישה איתה נתנה לי הרבה מידע והורידה לי את הלחץ
+ כי עברנו לאט לאט על כל הדברים שצריך לדעת ועל התנהלות בטיול 
+.זה התחיל להראות לי מציאותי והרגשתי שהודיה נותנת מעל ומעבר,
+ כמו להזמין איתי את הכרטיס טיסה כי פחדתי לעשות את זה לבד.
+בנוסף במסגרת הליווי הרגשתי שזה הניע אותי לבצע את הדברים
+`,
+  },
+];
+---
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+<section class="bg-gray-100" id="reviews">
+  <div class="mx-auto max-w-screen-xl">
+    <div class="px-4 py-16 sm:px-6 sm:py-24 lg:mr-0 lg:pl-8 lg:pr-0">
+      <div class="max-w-7xl items-end justify-between pr-6 sm:flex lg:pr-8">
+        <h2
+          class="text-right font-heebo text-4xl font-bold tracking-tight sm:text-5xl"
+        >
+          אבל אל תקשיבו לי...
+        </h2>
+
+        <div class="mt-8 flex gap-4 lg:mt-0">
+          <button
+            class="prev-button rounded-full border border-primary p-3 text-primary hover:bg-primary hover:text-white"
+          >
+            <span class="sr-only">Previous Slide</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="h-5 w-5 rtl:rotate-180"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 19.5L8.25 12l7.5-7.5"></path>
+            </svg>
+          </button>
+
+          <button
+            class="next-button rounded-full border border-primary p-3 text-primary hover:bg-primary hover:text-white"
+          >
+            <span class="sr-only">Next Slide</span>
+            <svg
+              class="h-5 w-5 rtl:rotate-180"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9 5l7 7-7 7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="mt-8 lg:col-span-2 lg:mx-0">
+        <div class="swiper-container !overflow-hidden">
+          <div class="swiper-wrapper">
+            {
+              reviews.map((review) => (
+                <div class="swiper-slide">
+                  <blockquote class="flex h-full flex-col justify-between bg-white p-12">
+                    <div>
+                      <div class="flex justify-center gap-0.5  text-yellow-500">
+                        <Star />
+                        <Star />
+                        <Star />
+                        <Star />
+                        <Star />
+                      </div>
+
+                      <div class="mt-4">
+                        <h3 class="font-varela text-primary text-2xl font-bold sm:text-3xl">
+                          {review.title}
+                        </h3>
+
+                        <p
+                          class={`mt-4 text-lg ${
+                            review == reviews.at(-1) ? "text-sm" : "text-lg"
+                          }  text-gray-600`}
+                        >
+                          {review.text}
+                        </p>
+                      </div>
+                    </div>
+
+                    <footer class="mt-8 text-gray-500">- {review.name}</footer>
+                  </blockquote>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const swiper = new Swiper(".swiper-container", {
+      loop: false,
+      slidesPerView: 1,
+      spaceBetween: 32,
+      autoplay: {
+        delay: 5000,
+      },
+      navigation: {
+        nextEl: ".next-button",
+        prevEl: ".prev-button",
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 1.5,
+          centeredSlides: true,
+        },
+        1024: {
+          centeredSlides: false,
+          slidesPerView: 2.25,
+        },
+      },
+    });
+  });
+</script>

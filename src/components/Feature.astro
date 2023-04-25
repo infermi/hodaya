@@ -1,0 +1,20 @@
+---
+const { title } = Astro.props;
+const { icon } = Astro.props;
+const { cotitle } = Astro.props;
+---
+
+<div class="mb-12 lg:mb-0">
+  <div
+    class="mb-6 inline-block aspect-square w-fit rounded-full bg-blue-600 p-3 shadow-lg"
+  >
+    <i class={`${icon} aspect-square text-[2.5em] text-white`}></i>
+  </div>
+  <h5 class="font-heebo text-lg font-bold">{title}</h5>
+  <h6 class="mb-1 text-base font-medium text-gray-500">
+    {cotitle}
+  </h6>
+  <p class="font-varela">
+    <slot />
+  </p>
+</div>
